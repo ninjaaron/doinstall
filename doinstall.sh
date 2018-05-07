@@ -8,7 +8,7 @@ arg_esc() {
 
 host="$1"
 user="${2:-$USER}"
-esc_user="$(arg_esc $user)"
+esc_user="$(arg_esc "$user")"
 
 scp -i ~/.ssh/id_rsa ./doinstall-root.sh "root@$host:"
 stty -echo
